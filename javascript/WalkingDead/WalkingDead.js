@@ -1,21 +1,14 @@
 window.onload = () =>{
     (function(){
-        // Functions
+        
         function buildQuiz(){
-          // variable to store the HTML output
           const output = [];
       
-          // for each question...
           myQuestions.forEach(
             (currentQuestion, questionNumber) => {
-      
-              // variable to store the list of possible answers
               const answers = [];
-      
-              // and for each available answer...
+
               for(letter in currentQuestion.answers){
-      
-                // ...add an HTML radio button
                 answers.push(
                   `<label>
                     <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -25,7 +18,6 @@ window.onload = () =>{
                 );
               }
       
-              // add this question and its answers to the output
               output.push(
                 `<div class="slide">
                   <div class="question"> ${currentQuestion.question} </div>
@@ -33,45 +25,26 @@ window.onload = () =>{
                 </div>`
               );
             }
-          );
-      
-          // finally combine our output list into one string of HTML and put it on the page
-          quizContainer.innerHTML = output.join('');
+          ); quizContainer.innerHTML = output.join('');
         }
       
         function showResults(){
       
-          // gather answer containers from our quiz
           const answerContainers = quizContainer.querySelectorAll('.answers');
       
-          // keep track of user's answers
           let numCorrect = 0;
-      
-          // for each question...
           myQuestions.forEach( (currentQuestion, questionNumber) => {
       
-            // find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
             const userAnswer = (answerContainer.querySelector(selector) || {}).value;
       
-            // if answer is correct
             if(userAnswer === currentQuestion.correctAnswer){
-              // add to the number of correct answers
               numCorrect++;
-      
-              // color the answers green
               answerContainers[questionNumber].style.color = 'lightgreen';
-            }
-            // if answer is wrong or blank
-            else{
-              // color the answers red
-              answerContainers[questionNumber].style.color = 'red';
-            }
+            }else{answerContainers[questionNumber].style.color = 'red';}
           });
       
-          // show number of correct answers out of total
-
           resultsContainer.innerHTML = `
           ${localStorage.getItem('naam')}: Je hebt ${numCorrect} van de ${myQuestions.length} goed <br />
           <progress value="${numCorrect}" max="${myQuestions.length}"></progress>`
@@ -97,133 +70,114 @@ window.onload = () =>{
           }
         }
       
-        function showNextSlide() {
-          showSlide(currentSlide + 1);
-        }
+        function showNextSlide() { showSlide(currentSlide + 1); }
+        function showPreviousSlide() { showSlide(currentSlide - 1); }
       
-        function showPreviousSlide() {
-          showSlide(currentSlide - 1);
-        }
-      
-        // Variables
+        
         const quizContainer = document.getElementById('quiz');
         const resultsContainer = document.getElementById('results');
         const submitButton = document.getElementById('submit');
         const myQuestions = [
           {
-            question: "Who invented JavaScript?",
+            question: "Naar wie is Judith vernoemd?",
             answers: {
-              a: "Douglas Crockford",
-              b: "Sheryl Sandberg",
-              c: "Brendan Eich"
+              a: "Ricks moeder",
+              b: "Carls leraar",
+              c: "Lori's zus"
+            },
+            correctAnswer: "b"
+          },
+          {
+            question: "Wie schoot Carl in het oog?",
+            answers: {
+              a: "Jessie",
+              b: "Rik",
+              c: "Ron"
             },
             correctAnswer: "c"
           },
           {
-            question: "Which one of these is a JavaScript package manager?",
+            question: "Wie heeft Andrew in de gevangenis vermoord?",
             answers: {
-              a: "Node.js",
-              b: "TypeScript",
-              c: "npm"
+              a: "Rik",
+              b: "Oscar",
+              c: "Axel",
+            },
+            correctAnswer: "b"
+          },
+          {
+            question: "Hoe heette de zoon van Michonne?",
+            answers: {
+              a: "Lamar",
+              b: "Mike",
+              c: "Andre",
             },
             correctAnswer: "c"
           },
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Hoe noemt Negan zijn honkbalknuppel?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Lucille",
+              b: "Greta",
+              c: "Marilyn",
             },
-            correctAnswer: "d"
+            correctAnswer: "a"
           },
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Welk oog verliest The Governor in de serie?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Links",
+              b: "Rechts",
             },
-            correctAnswer: "d"
+            correctAnswer: "b"
           },
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Wat zegt het Terminus-teken?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Mattheus",
+              b: "Markering",
+              c: "Paulus",
             },
-            correctAnswer: "d"
+            correctAnswer: "c"
           },
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Wie heeft Hershel vermoord?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Michonne",
+              b: "Wandelaars",
+              c: "De gouverneur",
             },
-            correctAnswer: "d"
+            correctAnswer: "c"
           },
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Hoe heet de tijger van Ezekials?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Shiva",
+              b: "Sabor",
+              c: "Khan",
             },
-            correctAnswer: "d"
-          },
-          {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
-            },
-            correctAnswer: "d"
-          },
-          {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
-            },
-            correctAnswer: "d"
+            correctAnswer: "a"
           }
           ,
           {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Hoe stierf Karel?",
             answers: {
-              a: "Angular",
-              b: "jQuery",
-              c: "RequireJS",
-              d: "ESLint"
+              a: "Vergiftigd",
+              b: "Verslonden door walkers",
+              c: "Schiet zichzelf neer",
             },
-            correctAnswer: "d"
+            correctAnswer: "c"
           }
         ];
       
-        // Kick things off
         buildQuiz();
-      
-        // Pagination
         const previousButton = document.getElementById("previous");
         const nextButton = document.getElementById("next");
         const slides = document.querySelectorAll(".slide");
         let currentSlide = 0;
       
-        // Show the first slide
         showSlide(currentSlide);
       
-        // Event listeners
         submitButton.addEventListener('click', showResults);
         previousButton.addEventListener("click", showPreviousSlide);
         nextButton.addEventListener("click", showNextSlide);
