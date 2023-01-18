@@ -71,7 +71,10 @@ window.onload = () =>{
           });
       
           // show number of correct answers out of total
-          resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+          resultsContainer.innerHTML = `
+          ${localStorage.getItem('naam')}: Je hebt ${numCorrect} van de ${myQuestions.length} goed <br />
+          <progress value="${numCorrect}" max="${myQuestions.length}"></progress>`
         }
       
         function showSlide(n) {
@@ -125,6 +128,77 @@ window.onload = () =>{
             },
             correctAnswer: "c"
           },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          },
+          {
+            question: "Which tool can you use to ensure code quality?",
+            answers: {
+              a: "Angular",
+              b: "jQuery",
+              c: "RequireJS",
+              d: "ESLint"
+            },
+            correctAnswer: "d"
+          }
+          ,
           {
             question: "Which tool can you use to ensure code quality?",
             answers: {
