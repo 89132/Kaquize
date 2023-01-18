@@ -1,0 +1,166 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Actor', sans-serif;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-rows: 0.2fr 3fr 2.5fr;
+    gap: 1em;
+    grid-template-areas: 
+    "header header"
+    "main illustration"
+    "footer footer"
+    ;
+}
+
+.navigation {
+    grid-area: header;
+    background-color: #EF4D3C;
+}
+
+.navigation nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5em;
+    padding-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoSite {
+    margin-left: 1em;
+    margin-top: 0.8em;
+    position: absolute;
+    width: 2em;
+}
+
+.navigation nav p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navigation nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4em;
+}
+
+.navigation nav ul a{
+    text-decoration: none;
+    gap: 1em;
+    font-size: 0.9rem;
+    color: #F6F6F6;
+}
+
+.navigation nav ul a:hover{
+    color: #ffffff;
+}
+
+.main {
+    grid-area: main;
+    padding-left: 5em;
+}
+
+.main h1{
+    margin-top: 1.6em;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1rem;
+}
+
+.main h2{
+    margin-top: -0.6em;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #6d6d6d;
+}
+
+.main hr{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.main h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1rem;
+}
+
+.main p{
+    margin-top: -0.8em;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #6d6d6d;
+}
+
+
+
+.illustration {
+    grid-area: illustration;
+    display: flex;
+    justify-content: center;
+}
+
+.illustration img{
+    margin-top: 5em;
+    margin-right: 3em;
+    position: absolute;
+    width: 47em;
+    
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #F6F6F6;
+    padding-left: 5em;
+}
+
+.footer form {
+    margin-top: 4em;
+}
+
+.footer label {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.footer input {
+    display: block;
+    margin-bottom: 2em;
+    padding-left: 0.5em;
+}
+
+#msg {
+    margin-top: -0.5em;
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+}
+
+.footer .btn {
+    background-color: #EF4D3C;
+    color: white;
+    border: none;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+}
