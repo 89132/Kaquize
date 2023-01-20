@@ -1,0 +1,110 @@
+.navigation {
+    grid-area: header;
+    background-color: #EF4D3C;
+}
+
+.navigation nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5em;
+    padding-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoSite {
+    margin-left: 1em;
+    margin-top: 0.8em;
+    position: absolute;
+    width: 2em;
+}
+
+.navigation nav p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navigation nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4em;
+}
+
+.navigation nav ul a{
+    text-decoration: none;
+    gap: 1em;
+    font-size: 0.9rem;
+    color: #F6F6F6;
+}
+
+.navigation nav ul a:hover{
+    color: #ffffff;
+}
+
+#text-area{
+    padding: 200px;
+    height: 1000px;
+}
+
+#text_info{
+
+    padding: 50px;
+    width: 600px;
+    height: 400px;
+
+}
+
+#text_info h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+#text_info p{
+    font-size: 20px;
+}
+
+#text_history{
+    margin-top: 20px;
+    float: right;
+    padding: 50px;
+    width: 600px;
+    height: 400px;
+}
+
+#text_history h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+#text_history p{
+    font-size: 20px;
+}
+
+#quiz {
+    background-color: #EF4D3C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#quiz:hover {
+    background-color: #ef4e3cf1;
+}
+
+#walter{
+    position: relative;
+    top: 200px;
+    width: 550px;
+    height: 350px;
+}
+
+#foto{
+    position: absolute;
+    top: 400px;
+    width: 550px;
+    height: 350px;
+}
