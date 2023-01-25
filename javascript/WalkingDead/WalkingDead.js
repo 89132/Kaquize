@@ -50,10 +50,10 @@ window.onload = () =>{
           <progress value="${numCorrect}" max="${myQuestions.length}"></progress>`
         }
       
-        function showSlide(n) {
+        function showSlide(Active) {
           slides[currentSlide].classList.remove('active-slide');
-          slides[n].classList.add('active-slide');
-          currentSlide = n;
+          slides[Active].classList.add('active-slide');
+          currentSlide = Active;
           if(currentSlide === 0){
             previousButton.style.display = 'none';
           }
