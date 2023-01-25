@@ -50,12 +50,18 @@ body {
 }
 
 #text-area{
-    padding: 200px;
-    height: 1000px;
+    padding: 100px;
+    height: 400px;
+}
+
+#text-area2{
+    padding: 100px;
+    height: 400px;
+    margin-bottom: 200px;
 }
 
 #text_info{
-
+    position: relative;
     padding: 50px;
     width: 600px;
     height: 400px;
@@ -103,16 +109,18 @@ body {
 
 #walter{
     position: relative;
-    top: 200px;
-    width: 550px;
-    height: 350px;
+    width: 650px;
+    height: 400px;
+    top: 170px;
+
 }
 
 #foto{
-    position: absolute;
-    top: 400px;
+    position: relative;
     width: 550px;
     height: 350px;
+    bottom: 390px;
+    left: 1100px;
 }
 
 .Home{

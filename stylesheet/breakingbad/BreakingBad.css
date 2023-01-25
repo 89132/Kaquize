@@ -1,0 +1,151 @@
+body{
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    grid-area: header;
+    background-color: #EF4D3C;
+    padding-bottom: 0.5em;
+}
+
+.navigation nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5em;
+    padding-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoSite {
+    margin-left: 1em;
+    margin-top: 0.8em;
+    position: absolute;
+    width: 2em;
+}
+
+.navigation nav p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navigation nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4em;
+}
+
+.navigation nav ul a{
+    text-decoration: none;
+    gap: 1em;
+    font-size: 0.9rem;
+    color: #F6F6F6;
+}
+
+.navigation nav ul a:hover{
+    color: #ffffff;
+}
+
+.questions{
+    margin: 3rem auto;
+    width: 60vw;
+    padding: 200px;
+    cursor: default;
+    border-radius: 1rem;
+    margin-top: 0px;
+    height: 200px;
+
+}
+#question{
+    margin-bottom: 1rem;
+}
+.option{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    width: 15rem;
+    background: #EF4D3C;
+    border-radius: 1rem;
+}
+.option:hover{
+    color: black;
+}
+ol{
+    position: relative;
+    padding: 0 1.5rem;
+    color: rgb(1,73,73);
+}
+span{
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 1rem;
+}
+#answer{
+    margin-top: 2.5rem;
+}
+#stat{
+    margin-top: 1.5rem;
+}
+.buttons{
+    text-align: center;
+}
+button{
+    padding: 0.2rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    color: black;
+    background: #EF4D3C;
+}
+button:active{
+    background: lavender;
+}
+#scoreboard,#answerBank{
+    width: 20rem;
+
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    display: none;
+}
+#score-title{
+    margin: 1rem 0;
+}
+
+#score{
+    font-size: 2.5rem;
+}
+#answerBank li{
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
+#answers{
+    margin-top: 1rem;
+}
+
+#break{
+    left: 800px;
+    width: 400px;
+    height: 230px;
+    position: relative;
+    bottom: 200px;
+    
+}
+
+.Home{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
