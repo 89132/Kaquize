@@ -128,6 +128,7 @@ window.onload = () =>{
             answers: {
               a: "Links",
               b: "Rechts",
+              c: "beide"
             },
             correctAnswer: "b"
           },
