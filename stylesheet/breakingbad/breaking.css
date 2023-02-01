@@ -109,10 +109,10 @@ body {
 
 #walter{
     position: relative;
-    width: 650px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     top: 170px;
-
+    left: 100px;
 }
 
 #foto{
