@@ -1,7 +1,7 @@
-//Question bank
+//vragen
 var questionBank= [
     {
-        question : 'Wat is Maries favoriete kleur?',
+        question : "Wat is Marie's favoriete kleur?",
         option : ['Paars','Roze','Geel','Groen'],
         answer : 'Paars'
     },
@@ -70,7 +70,7 @@ var span= document.querySelectorAll('span');
 var i = 0;
 var score = 0;
 
-//function to display questions
+//laat de quiz zien
 function displayQuestion(){
     for(var a=0;a<span.length;a++){
         span[a].style.background='none';
@@ -83,7 +83,7 @@ function displayQuestion(){
     stat.innerHTML= "Vraag"+' '+(i+1)+' '+'tot'+' '+questionBank.length;
 }
 
-//function to calculate scores
+//scoren calculaten
 function calcScore(e){
     if(e.innerHTML===questionBank[i].answer && score<questionBank.length)
     {
@@ -95,8 +95,7 @@ function calcScore(e){
     }
     setTimeout(nextQuestion,300);
 }
-
-//function to display next question
+//volgende vraag
 function nextQuestion(){
     if(i<questionBank.length-1)
     {
@@ -104,16 +103,17 @@ function nextQuestion(){
         displayQuestion();
     }
     else{
-        points.innerHTML= score+ '/'+ questionBank.length;
+        const scores = document.getElementById("scores")
+        scores.innerHTML = `
+          ${localStorage.getItem('naam')}: ${score} / ${questionBank.length} goed <br />`
         quizContainer.style.display= 'none';
-        scoreboard.style.display= 'block'
+        scoreboard.style.display= 'block';
+
     }
 }
 
-//click events to next button
 next.addEventListener('click',nextQuestion);
 
-//Back to Quiz button event
 function backToQuiz(){
     location.reload();
 }
